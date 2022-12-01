@@ -1,1 +1,1 @@
-rtt
+__import__("0-add")
