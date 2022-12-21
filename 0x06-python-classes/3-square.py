@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 #!/usr/bin/python3
 
 """Define a class Square."""
+=======
+ #!/usr/bin/python3
+
+"""Defines a class Square"""
+>>>>>>> 33545e5b6d1dc597ff5ae0aca4912665c83c89a8
 
 
 class Square:
