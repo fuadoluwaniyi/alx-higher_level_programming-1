@@ -1,27 +1,31 @@
 #!/usr/bin/python3
-
-"""Define a MagicClass matching exactly a bytecode provided by Holberton."""
-
-import math
+# 0-square.py by Ehoneah Obed
+"""A module that defines a square """
 
 
-class MagicClass:
-    """Represent a circle."""
+class Square:
+    """A class that represents a square"""
 
-    def __init__(self, radius=0):
-        """Initialize a MagicClass.
-        Arg:
-            radius (float or int): The radius of the new MagicClass.
+    def __init__(self, size=0):
+        """Initializing this square class
+        Args:
+            size: represnets the size of the square defined
+        Raises:
+            TypeError: if size is not integer
+            ValueError: if size is less than zero
         """
-        self.__radius = 0
-        if type(radius) is not int and type(radius) is not float:
-            raise TypeError("radius must be a number")
-        self.__radius = radius
+
+        if not isinstance(size, int):
+            raise TypeError('size must be an integer')
+        if size < 0:
+            raise ValueError('size must be >= 0')
+
+        self.__size = size
 
     def area(self):
-        """Return the area of the MagicClass."""
-        return (self.__radius ** 2 * math.pi)
+        """
+        Calculate area of the square
+        Returns: The square of the size
+        """
 
-    def circumference(self):
-        """Return The circumference of the MagicClass."""
-        return (2 * math.pi * self.__radius)
+        return (self.__size ** 2)
