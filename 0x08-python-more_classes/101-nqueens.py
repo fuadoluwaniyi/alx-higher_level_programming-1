@@ -35,7 +35,8 @@ def xout(board, row, col):
     All spots where non-attacking queens can no
     longer be played are X-ed out.
     Args:
-        board (list): The current working chessboard.
+  
+  board (list): The current working chessboard.
         row (int): The row where a queen was last played.
         col (int): The column where a queen was last played.
     """
@@ -96,14 +97,16 @@ def recursive_solve(board, row, queens, solutions):
         return (solutions)
 
     for c in range(len(board)):
-        if board[row][c] == " ":
+       
+    if board[row][c] == " ":
             tmp_board = board_deepcopy(board)
             tmp_board[row][c] = "Q"
             xout(tmp_board, row, c)
             solutions = recursive_solve(tmp_board, row + 1,
                                         queens + 1, solutions)
 
-    return (solutions)
+  
+return (solutions)
 
 
 if __name__ == "__main__":
